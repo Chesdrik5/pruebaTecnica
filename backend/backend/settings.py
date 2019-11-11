@@ -123,6 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# register route for react
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
 )

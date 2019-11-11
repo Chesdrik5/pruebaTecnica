@@ -19,6 +19,9 @@ from rest_framework import routers
 from truehome import views
 
 router = routers.DefaultRouter()
+"""
+Routes for api 
+"""
 router.register(r'propiedads', views.PropiedadView, 'propiedad')
 router.register(r'propietarios', views.PropietarioView, 'propietario')
 

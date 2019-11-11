@@ -1,6 +1,10 @@
 from django.db import models
 
 # Create your models here.
+"""
+Models Propiedad and Propietario
+Relatioships : one to many
+"""
 class Propiedad(models.Model):
     direccion = models.CharField(max_length=150)
     costo = models.CharField(max_length=50)
@@ -15,5 +19,5 @@ class Propietario(models.Model):
     apMat = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.propiedad
+        return self.nombre
     
