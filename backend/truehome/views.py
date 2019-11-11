@@ -18,3 +18,5 @@ class PropietarioView(viewsets.ModelViewSet):
     serializer_class = PropietarioSerializer
     queryset = Propietario.objects.all()
 # Create your views here.
+
+# Create your views here.

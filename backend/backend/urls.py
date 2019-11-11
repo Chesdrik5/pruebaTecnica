@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from truehome import views
+from trueHome import views
 
 router = routers.DefaultRouter()
 """
