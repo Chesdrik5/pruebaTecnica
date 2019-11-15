@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Table } from 'reactstrap';
 import { Button, ButtonGroup } from 'reactstrap';
 import { MdModeEdit } from 'react-icons/md';
 import { MdDelete } from 'react-icons/md';
-
 
 const url_base = "http://localhost:8000/api/propiedads/";
 
@@ -42,7 +41,9 @@ class Tabla extends Component {
     loadAll = () => {
         const datos = fetch(url_base).then(resolve => {
           return resolve.json();
-        }).then(data => {
+        })
+        .catch(err => console.error(err))
+        .then(data => {
           const list = this.getData(data);
           this.setState({propList : list});
         });
@@ -68,7 +69,7 @@ class Tabla extends Component {
 
     handleDelete = item => {
         console.dir(item);
-        fetch(`http://localhost:8000/api/propiedads/${item.id}`, {
+        fetch(url_base +`${item.id}`, {
             method: 'DELETE',
         }
         ).then(res => this.loadAll());
