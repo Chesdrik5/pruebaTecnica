@@ -3,12 +3,12 @@ from .models import Propiedad
 from .models import Propietario
 
 class PropiedadAmin(admin.ModelAdmin):
-    list_display = ('propietario','direccion', 'costo')
+    list_display = ('id','propietario','direccion', 'costo')
 
 admin.site.register(Propiedad, PropiedadAmin)
 
 class PropietarioAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'apPat', 'apMat')
+    list_display = ('id','nombre', 'apPat', 'apMat')
 
 admin.site.register(Propietario, PropietarioAdmin)
 

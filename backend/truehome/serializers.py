@@ -9,9 +9,9 @@ Fields that we want to be converted to JSON
 class PropiedadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Propiedad
-        fields = ('propietario', 'direccion', 'costo')
+        fields = ('id','propietario', 'direccion', 'costo')
 
 class PropietarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Propietario
-        fields = ('nombre', 'apPat', 'apMat')
+        fields = ('id','nombre', 'apPat', 'apMat')
